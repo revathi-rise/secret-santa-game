@@ -36,68 +36,63 @@ cd <repository-folder>
 Install dependencies:
 
 npm install
-# or using yarn
-# yarn install
+## or using yarn
+## yarn install
 
 
 Run the project:
 
-# Development mode
+## Development mode
 npm run start
 
-# Watch mode (auto-reload)
+## Watch mode (auto-reload)
 npm run start:dev
 
-# Production mode
+## Production mode
 npm run start:prod
 
 
 Run tests:
 
-# Run all unit tests
+## Run all unit tests
 npm run test
 
-# Run tests in watch mode
+## Run tests in watch mode
 npm run test:watch
 
 
-API Usage – Secret Santa Upload
+## API Usage – Secret Santa Upload
 
 The Secret Santa system exposes a POST API endpoint to upload employee data and previous year assignments, and generate a new Secret Santa assignment CSV.
 
 Endpoint
 POST http://localhost:3000/secret-santa/upload
 
-Request
+## Request
 
-Content-Type: multipart/form-data
+- Content-Type: multipart/form-data
 
-Form Data Keys:
+## Form Data Keys:
 
-employees – Upload the current employee list file (CSV or Excel).
+- employees – Upload the current employee list file (CSV or Excel).
+- previous – Upload the previous year’s Secret Santa assignment file (CSV or Excel).
 
-previous – Upload the previous year’s Secret Santa assignment file (CSV or Excel).
+## Example using Postman:
 
-Example using Postman:
-
-Open Postman.
-
-Set method to POST.
-
-Enter the URL:
+- Open Postman.
+- Set method to POST.
+- Enter the URL:
 
 http://localhost:3000/secret-santa/upload
 
+- Go to the Body tab → Select form-data.
+- Add two keys:
 
-Go to the Body tab → Select form-data.
+| Key        | Type | Description                         |
+|------------|------|-------------------------------------|
+| employees  | File | Select the current employee list    |
+| previous   | File | Select previous year assignments    |
 
-Add two keys:
-
-Key	Type	Description
-employees	File	Select the current employee list
-previous	File	Select previous year assignments
-
-Choose the files for each key using the file chooser.
 
 Response
 
