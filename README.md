@@ -33,12 +33,9 @@ git clone <repository-url>
 cd <repository-folder>
 
 
-Install dependencies:
+## Install dependencies:
 
-npm install
-## or using yarn
-## yarn install
-
+npm install or using yarn
 
 Run the project:
 
@@ -98,10 +95,13 @@ Response
 
 On successful upload, the API responds with a JSON object containing the message and the path to the generated CSV:
 
+### Example Response
+
+```json
 {
-    "message": "Assignments generated successfully",
-    "status" : true,
-    "outputPath": "D:\\secret-santa-game\\assignments\\secret-santa-output.csv"
+  "message": "Assignments generated successfully",
+  "status": true,
+  "outputPath": "D:\\secret-santa-game\\assignments\\secret-santa-output.csv"
 }
 
 
