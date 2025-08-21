@@ -46,10 +46,10 @@ export class SecretSantaController {
         employeesPath,
         previousPath
       );
-      return res.status(200).json({ message: 'Assignments generated successfully', outputPath });
+      return res.status(200).json({ status: true, message: 'Assignments generated successfully', outputPath });
     } catch (err) {
       console.error('Error generating assignments:', err);
-      return res.status(500).json({ message: 'Failed to generate assignments', error: err.message });
+      return res.status(500).json({ status: false, message: 'Failed to generate assignments', error: err.message });
     }
 
   }

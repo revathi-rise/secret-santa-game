@@ -44,6 +44,7 @@ describe('SecretSantaController', () => {
     expect(mockRes.status).toHaveBeenCalledWith(200);
     expect(mockRes.json).toHaveBeenCalledWith({
       message: 'Assignments generated successfully',
+      status: true,
       outputPath: outputPath,
     });
   });
